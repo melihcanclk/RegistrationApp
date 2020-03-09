@@ -1,6 +1,5 @@
 
 import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,13 +11,8 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.io.File;
-import java.io.IOException;
 import java.sql.*;
 import java.util.Enumeration;
-import java.util.Map;
-
-import static com.cloudinary.utils.ObjectUtils.*;
-
 /**
  * A Java Swing program that does registration
  *
@@ -265,7 +259,8 @@ public class Register extends JFrame implements ActionListener {
                     (int) date.getSelectedItem(),
                     (int) month.getSelectedItem(),
                     (int) year.getSelectedItem(),
-                    addressText.getText());
+                    addressText.getText(),
+                    file);
 
             // TODO : Input correction (Mobile will take only numbers etc.)
             
@@ -281,6 +276,7 @@ public class Register extends JFrame implements ActionListener {
                 file = chooser.getSelectedFile();
                 nameOfFile.setText(chooser.getSelectedFile().getName());
                 nameOfFile.setSize(chooser.getSelectedFile().getName().length() * 8, 20);
+
             }
         }
         if (event.getSource() == reset) {
@@ -311,7 +307,7 @@ public class Register extends JFrame implements ActionListener {
     private void createMenuBar() {
 
         JMenuBar menuBar = new JMenuBar();
-        ImageIcon exitIcon = new ImageIcon("UserRegistrationApp/src/resources/Exit.png");
+        ImageIcon exitIcon = new ImageIcon("../UserRegistrationApp/src/resources/Exit.png");
 
         JMenu fileMenu = new JMenu("File");
         //alt+f is shortcut to select file menu bar
