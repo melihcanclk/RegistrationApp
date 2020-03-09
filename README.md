@@ -7,6 +7,9 @@ save them at MySql database including name of file and file itself.
 
 
 **In-Depth:**  
+For create connection between mysql and java, I used mysql java JAR extended library. If you want to use this app, please
+add this JAR file to extended libraries.  
+
 For creating Java Graphical User Interface, Java Swing package used.
 ![Screenshot1](https://github.com/melihcanclk/UserRegistrationApp/blob/master/screenshots/MainPage.png)  
   
@@ -30,4 +33,6 @@ After filling informations and adding file, it looks like this
 For showing that files can be taken from database, file will be saved to path
 
 ![Screenshot6](https://github.com/melihcanclk/UserRegistrationApp/blob/master/screenshots/FileReceived.png)  
+
+
   
