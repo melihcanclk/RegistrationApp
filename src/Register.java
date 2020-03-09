@@ -1,6 +1,3 @@
-
-import com.cloudinary.Cloudinary;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -56,7 +53,6 @@ public class Register extends JFrame implements ActionListener {
     private Integer dates[];
     private Integer months[];
     private Integer years[];
-    Cloudinary cloudinary;
 
     private StringBuilder concatedString;
 
